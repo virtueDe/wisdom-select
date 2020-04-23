@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <wisdom-select placeholder="请选择" :mapData="options" @selectChange="changeValue" />
+    <wisdom-select placeholder="请选择" :optionsData="options" @selectChange="changeValue" />
 
 <!--    <el-select v-model="value" placeholder="请选择" @change="changeSelect">-->
 <!--      <el-option-->

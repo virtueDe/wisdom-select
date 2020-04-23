@@ -38,7 +38,7 @@
     computed: {
       typeaheadData() {
         if (!this.value) {
-          return this.mapData
+          return this.optionsData
         } else {
         }
       }
@@ -51,7 +51,7 @@
         type: String,
         default: '请选择'
       },
-      mapData: {
+      optionsData: {
         type: Array,
         default: function () {
           return []
@@ -68,7 +68,7 @@
       },
       // opction选项 鼠标事件
       setActiveClass(index) {
-        this.mapData.forEach((item, innerIndex) => {
+        this.optionsData.forEach((item, innerIndex) => {
           if (index === innerIndex) {
             // 添加激活的状态
             this.$set(item, 'active', true);
@@ -99,7 +99,7 @@
       },
       // 鼠标点击选择
       selectChild(index) {
-        this.mapData.forEach((item, innerIndex) => {
+        this.optionsData.forEach((item, innerIndex) => {
           if (index === innerIndex || item.active) {
             this.placeholderValue = item.text;
             this.isExpand = false;
